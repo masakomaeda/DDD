@@ -26,6 +26,13 @@ namespace DDD.WinForm.ViewModels
             }
         }
 
+
+        private string _measureDate = "";
+        public string MeasureDate
+        {
+            get => _measureDate;
+            set => SetProperty(ref _measureDate, value);
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual bool SetProperty<T>(ref T field, T value, [CallerMemberName]string propertyName = null)

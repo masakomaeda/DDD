@@ -19,7 +19,7 @@ namespace DDD.WinForm.ViewModels
 
             foreach (var entity in _measureRepository.GetData())
             {
-                Measures.Add(new MeasureListViewModelMeasure());
+                Measures.Add(new MeasureListViewModelMeasure(entity));
             }
         }
 

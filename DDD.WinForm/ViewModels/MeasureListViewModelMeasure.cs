@@ -1,24 +1,37 @@
-﻿using DDD.Domain.Repositories;
+﻿using DDD.Domain.Entities;
+using DDD.Domain.Repositories;
+using DDD.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DDD.WinForm.ViewModels
 {
-    public class MeasureListViewModelMeasure
+    public class MeasureListViewModelMeasure 
     {
-        //private IMeasureRepository _measureRepository;
-        ////public MeasureListViewModelMeasure() : this()
 
-        //public MeasureListViewModelMeasure(IMeasureRepository measureRepository)
+  
+        public string MeasureValue => _entity.MeasureValue.DisplayValue;
+        public string MeasureDate => _entity.MeasureDate.DisplayValue;
+        //public MeasureListViewModelMeasure() : this(Factories.CreateSensorRepository())
         //{
-        //    _measureRepository = measureRepository;
-        //    //_measureRepository.GetData().All(entity => Measures.Add(new MeasureListViewModel()));
         //}
 
-        //public BindingList<MeasureListViewModelMeasure> Measures { get; set; } = new BindingList<MeasureListViewModelMeasure>();
+        public MeasureListViewModelMeasure(MeasureEntity entity)
+        {
+            _entity = entity;
+        }
+
+        private MeasureEntity _entity;
+
+        //public void Measures()
+        //{
+        //    var value = _sensorRepository.GetData();
+        //    MeasureValue = value.DisplayValue;
+        //}
     }
 }
