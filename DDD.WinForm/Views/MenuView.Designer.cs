@@ -32,6 +32,7 @@ namespace DDD.WinForm.Views
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.MeasureButton = new System.Windows.Forms.Button();
             this.LatestButton = new System.Windows.Forms.Button();
+            this.ListButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,14 +40,16 @@ namespace DDD.WinForm.Views
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.ListButton, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.MeasureButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.LatestButton, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 9);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 100);
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 172);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // MeasureButton
@@ -61,13 +64,23 @@ namespace DDD.WinForm.Views
             // 
             // LatestButton
             // 
-            this.LatestButton.Location = new System.Drawing.Point(3, 53);
+            this.LatestButton.Location = new System.Drawing.Point(3, 58);
             this.LatestButton.Name = "LatestButton";
-            this.LatestButton.Size = new System.Drawing.Size(396, 44);
+            this.LatestButton.Size = new System.Drawing.Size(396, 39);
             this.LatestButton.TabIndex = 1;
             this.LatestButton.Text = "Latest";
             this.LatestButton.UseVisualStyleBackColor = true;
             this.LatestButton.Click += new System.EventHandler(this.LatestButton_Click);
+            // 
+            // ListButton
+            // 
+            this.ListButton.Location = new System.Drawing.Point(3, 103);
+            this.ListButton.Name = "ListButton";
+            this.ListButton.Size = new System.Drawing.Size(396, 39);
+            this.ListButton.TabIndex = 2;
+            this.ListButton.Text = "List";
+            this.ListButton.UseVisualStyleBackColor = true;
+            this.ListButton.Click += new System.EventHandler(this.ListButton_Click);
             // 
             // MenuView
             // 
@@ -87,5 +100,6 @@ namespace DDD.WinForm.Views
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button MeasureButton;
         private System.Windows.Forms.Button LatestButton;
+        private System.Windows.Forms.Button ListButton;
     }
 }

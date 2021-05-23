@@ -28,5 +28,11 @@ namespace DDD.WinForm.Views
             using var f = new LastView();
             f.ShowDialog();
         }
+
+        private void ListButton_Click(object sender, EventArgs e)
+        {
+            using var f = new MeasureLisstView();
+            f.ShowDialog();
+        }
     }
 }
